@@ -16,6 +16,7 @@ public class CheckWin : MonoBehaviour
     public GameObject PopLose;
     public GameObject PopDraw;
     public GameObject CreateChip;
+    public GameObject BG;
     
     
 
@@ -36,20 +37,20 @@ public class CheckWin : MonoBehaviour
         if (GameBoard.Instance.GetGameStatus() == GameBoard.GAME_STATUS.WIN)
         {
             PopWin.SetActive(true);
-            
+            BG.SetActive(true);
             return;
            
         }
         else if(GameBoard.Instance.GetGameStatus() == GameBoard.GAME_STATUS.LOSE)
         {
             PopLose.SetActive(true);
-            
+            BG.SetActive(true);
             return;
         }
         else if(GameBoard.Instance.GetGameStatus() == GameBoard.GAME_STATUS.DRAW)
         {
             PopDraw.SetActive(true);
-            
+            BG.SetActive(true);
             return;
         }
         TheCheckWin();
